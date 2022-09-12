@@ -30,7 +30,7 @@ BEGIN
         //recuperation coordonnees premier vecteur
         Write("donnez l'abscisse du deuxieme vecteur");
         Read(x2);
-        Write("donnez l'abscisse du deuxieme vecteur");
+        Write("donnez l'ordonnée du deuxieme vecteur");
         Read(y2);
 
         //appel fonction pour calcul prodit scalaire
