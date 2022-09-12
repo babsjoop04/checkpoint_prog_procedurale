@@ -12,7 +12,7 @@ END
 
 ALGORITHM verif_orthonormalite
 VAR
-    ps,x1,y1,x2,y2 : FLOAT;
+    product,x1,y1,x2,y2 : FLOAT;
     i,n : INTEGER;
 BEGIN
     Write("Donnez le nombre de paires de vecteurs ");
@@ -34,10 +34,10 @@ BEGIN
         Read(y2);
 
         //appel fonction pour calcul prodit scalaire
-       ps := dot_product(x1,y1,x2,y2);
+       product := dot_product(x1,y1,x2,y2);
 
         // verification orthogonalite
-       IF (ps = 0) THEN
+       IF (product = 0) THEN
         Write("Ces deux vecteurs sont orthogonaux");
        ELSE
         Write("Ces deux vecteurs ne sont pas orthogonaux");
