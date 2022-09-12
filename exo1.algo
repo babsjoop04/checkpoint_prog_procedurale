@@ -1,0 +1,49 @@
+// fonction calcule le produit scalaire de deux 
+// vecteurs representés dans un repere orthonormé
+
+FUNCTION dot_product(a1,a2,b1,b2:FLOAT) : FLOAT
+VAR
+    ps :FLOAT ;
+BEGIN
+    ps := a1*a2 + b1*b2;
+    RETURN ps ;
+END
+
+
+ALGORITHM verif_orthonormalite
+VAR
+    ps,x1,y1,x2,y2 : FLOAT;
+    i,n : INTEGER;
+BEGIN
+    Write("Donnez le nombre de paires de vecteurs ");
+    Read(n);
+
+    FOR i FROM 0 TO n-1 STEP 1  DO
+        Write("Donnez les coordonées des vecteurs de la ",i+1,"eme paire");
+
+        //recuperation coordonnees premier vecteur
+        Write("donnez l'abscisse du premier vecteur");
+        Read(x1);
+        Write("donnez l'ordonnée du premier vecteur");
+        Read(y1);
+        
+        //recuperation coordonnees premier vecteur
+        Write("donnez l'abscisse du deuxieme vecteur");
+        Read(x2);
+        Write("donnez l'abscisse du deuxieme vecteur");
+        Read(y2);
+
+        //appel fonction pour calcul prodit scalaire
+       ps := dot_product(x1,y1,x2,y2);
+
+        // verification orthogonalite
+       IF (ps = 0) THEN
+        Write("Ces deux vecteurs sont orthogonaux");
+       ELSE
+        Write("Ces deux vecteurs ne sont pas orthogonaux");
+       END_IF
+    END_FOR
+END
+
+
+
