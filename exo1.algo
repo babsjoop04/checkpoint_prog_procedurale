@@ -1,7 +1,7 @@
 // fonction calcule le produit scalaire de deux 
 // vecteurs representés dans un repere orthonormé
 
-FUNCTION dot_product(a1,a2,b1,b2:FLOAT) : FLOAT
+FUNCTION dot_product(a1,b1,a2,b2:FLOAT) : FLOAT
 VAR
     ps :FLOAT ;
 BEGIN
