@@ -33,7 +33,7 @@ BEGIN
         Write("donnez l'ordonnée du deuxieme vecteur");
         Read(y2);
 
-        //appel fonction pour calcul prodit scalaire
+        //appel fonction pour calcul produit scalaire
        product := dot_product(x1,y1,x2,y2);
 
         // verification orthogonalite
