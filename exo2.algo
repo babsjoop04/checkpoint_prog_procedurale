@@ -1,0 +1,36 @@
+ALGORITHM insertion_sort
+VAR
+    arr : ARRAY_OF INTEGER[n];
+    temp : ARRAY_OF INTEGER[1];
+    i,n,j : INTEGER;
+BEGIN
+    // recuperation taille tableau
+    Write("donnez la taille du tableau");
+    Read (n);
+
+    // on crée une boucle permettant de remplir des 2 tableaux
+    FOR i FROM 0 TO n-1 STEP 1  DO
+        Write("Donnez le "i+1"eme nombre du tableau tab1");
+        read(arr[i]);
+    END_FOR
+
+    FOR i FROM 1 TO n-1 STEP 1  DO
+        // recuperation de arr[i] dans temp
+        temp[0] := arr[i];
+        j := i;
+
+
+        //cette boucle permet de connaitre la place de 
+        // l'element arr[i] dans le tableau final trié
+        WHILE (temp[0]<arr[j-1]) DO
+            arr[j] := arr[j-1];
+            j := j-1;
+        END_WHILE
+
+        //placement de l'element a sa place
+        
+        arr[j] := temp[0];
+
+    END_FOR
+    
+END
