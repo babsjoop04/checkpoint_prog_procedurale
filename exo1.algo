@@ -27,7 +27,7 @@ BEGIN
         Write("donnez l'ordonnée du premier vecteur");
         Read(y1);
         
-        //recuperation coordonnees premier vecteur
+        //recuperation coordonnees deuxieme vecteur
         Write("donnez l'abscisse du deuxieme vecteur");
         Read(x2);
         Write("donnez l'ordonnée du deuxieme vecteur");
