@@ -1,8 +1,8 @@
 ALGORITHM insertion_sort
 VAR
     arr : ARRAY_OF INTEGER[n];
-    temp : ARRAY_OF INTEGER[1];
-    i,n,j : INTEGER;
+    temp : INTEGER;
+    i,n,j,k : INTEGER;
 BEGIN
     // recuperation taille tableau
     Write("donnez la taille du tableau");
@@ -16,20 +16,27 @@ BEGIN
 
     FOR i FROM 1 TO n-1 STEP 1  DO
         // recuperation de arr[i] dans temp
-        temp[0] := arr[i];
+        temp := arr[i];
         j := i;
+        k := i;
 
-
+        
         //cette boucle permet de connaitre la place de 
         // l'element arr[i] dans le tableau final trié
-        WHILE (temp[0]<arr[j-1]) DO
-            arr[j] := arr[j-1];
-            j := j-1;
+
+        WHILE (k!=0) DO
+
+            IF (temp < arr[j-1]) 
+            THEN arr[j] := arr[j-1];
+                j := j-1;
+            END_IF
+        k := k-1;
         END_WHILE
+
 
         //placement de l'element a sa place
         
-        arr[j] := temp[0];
+        arr[j] := temp;
 
     END_FOR
     

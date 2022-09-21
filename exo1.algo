@@ -18,6 +18,8 @@ BEGIN
     Write("Donnez le nombre de paires de vecteurs ");
     Read(n);
 
+    // paire =3
+
     FOR i FROM 0 TO n-1 STEP 1  DO
         Write("Donnez les coordonées des vecteurs de la ",i+1,"eme paire");
 
